@@ -1,0 +1,52 @@
+<!-- Last edited by Eric Wang 2025 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<body onload="main()">
+    <!-- WebGL Utility Scripts -->
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils-cs351.js"></script>
+    <script src="lib/cuon-algebra-cs351.js"></script>
+
+    <!-- Load our terrain class definitions -->
+    <script src="terrain.js"></script>
+
+    <!-- Select a JavaScript file -->
+    <script src="final_project.js"></script>
+
+    <!-- Setup the Canvas -->
+    <canvas id="canvas" width="1000" height="800">
+        Please use a browser that supports "canvas"
+    </canvas>
+
+    <!-- Explanation of camera controls -->
+    <p>
+        Controls for camera movement:
+        WASD forward/backward/left/right ROTATIONS, R to forward, and F to go backwards.
+        <button id="toggleGridBtn" style="margin-left: 140px;">Toggle Grid</button>
+    </p>
+
+    <p>
+        I got rid of orthographic projection because it was kinda ugly :(.
+        <button id="focusArchBtn" style="margin-left: 375px">Focus on Arch</button>
+        <button id="focusPlaneBtn">Focus on Plane</button>
+    </p>
+
+    <!-- Explanation of plane movement -->
+    <p>
+        Press K and L to move the plane forward and backward
+        <span style="display:inline-block; width:375px;"></span>
+        Sun Speed: 
+        <input type="range" id="sunSpeedSlider" min="20" max="180" value="100" step="1" style="width: 150px; vertical-align: middle;">
+        <span id="sunSpeedValue">1.0x</span>
+    </p>
+
+    <p>
+        Driving Mode Controls: WS forward/backward, AD turn left/right
+        <button id="driveModeBtn" style="margin-left: 435px">Toggle Driving Mode</button>
+    </p>
+</body>
+
+</html>
